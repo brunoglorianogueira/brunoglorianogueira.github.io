@@ -45,17 +45,17 @@ const EN = {
   "q3": "Bruno was always the voice that <strong>brought the solution, not the problem</strong>. <strong>Impeccable organization</strong>, kindness, a courteous tone and proactivity to the fullest. […] Bruno is someone you <strong>recommend with your eyes closed</strong>.",
   "q3r": "Full Professor at UFMG and co-founder of emPRO · project partner at Synapse",
   "q4": "Bruno can <strong>summarize clients' needs clearly and objectively</strong>, improving communication and putting ideas into practice. As a coordinator, he <strong>fostered a cooperative environment</strong>.",
-  "q4r": "Pediatrician and professor (PUC Minas) · we worked together at Synapse",
+  "q4r": "Pediatrician and professor (PUC Minas) · reported to me at Synapse",
   "q5": "He has <strong>natural leadership and an entrepreneurial spirit</strong>, and stood out in the trainee team we put together at the time. […] I strongly recommend Bruno for his talent, <strong>easy communication</strong>, entrepreneurship and <strong>teamwork</strong>!",
-  "q5r": "HCM Practice Leader, Oracle Consulting · my manager early in my career",
+  "q5r": "HCM Practice Leader, Oracle Consulting · my manager at Arte Informática",
   "q6": "Bruno is <strong>frank and sincere</strong>, and <strong>knows a lot about business and people</strong>. […] After all that time of conversations and professional growth, in which Bruno was key, <strong>I got the promotion I'd been hoping for</strong> at my company.",
   "q6r": "DevOps and Cloud · my mentee at Escola da Nuvem",
   "q7": "His work is grounded in <strong>encouraging, developing and creating learning opportunities</strong> for his team. He always keeps an eye on the <strong>human side</strong> of his company. […] He has a unique charisma and <strong>enthusiasm for teamwork</strong>.",
-  "q7r": "Sales representative at Amju Lentes · reported to me for 15 years",
+  "q7r": "Sales Manager at Amju Lentes · reported to me for 15 years",
   "q8": "Bruno has always shown a great ability to <strong>combine technical and interpersonal skills</strong>, which is essential to <strong>translate business needs into technology solutions</strong>. […] He spared no effort to <strong>deliver the results</strong> he committed to.",
-  "q8r": "Senior Director of Sales, Marketing and Business Development · we worked together on several projects",
+  "q8r": "Senior Director of Sales, Marketing and Business Development · my peer at Arte Informática",
   "q9": "An excellent professional, dedicated, always willing to help and to <strong>find alternatives and solutions</strong> for the B2B business, focused on <strong>customer satisfaction</strong>. Years of great <strong>synergy, respect and teamwork</strong>.",
-  "q9r": "Sales analyst in the industry · I was her client",
+  "q9r": "Customer Service at Alcon · served Amju Lentes",
   "quotes.more": "See all recommendations on LinkedIn →",
 
   "cases.eyebrow": "In practice",
@@ -178,8 +178,9 @@ const EN = {
   "book.eyebrow": "My book",
   "book.sub": "A journey through the stories, memories and life lessons of Grandpa Geraldo (in Portuguese)",
   "book.body": "A book written <strong>as a family, by many hands</strong>, gathering the stories of my grandfather, <strong>Geraldo Glória</strong>. He helped build roads across Brazil, but left an even deeper mark on the people he met along the way.",
+  "book.ai": "I used <strong>AI (ChatGPT)</strong> throughout the process: to transcribe the stories sent by the family, organize the texts and, above all, <strong>learn the way my grandfather told his stories</strong>. From there, we built the stories together, <strong>told in his own voice</strong>.",
   "book.cta": "Buy on Amazon",
-  "book.format": "Kindle eBook · in Portuguese",
+  "book.format": "In Portuguese · digital and print editions",
 
   "proj.eyebrow": "In progress",
   "proj.title": "Projects",
@@ -191,8 +192,9 @@ const EN = {
   "link.cv": "Résumé",
   "link.cvd": "PDF · English",
   "link.book": "My book",
-  "link.bookd": "Amazon · Kindle eBook",
-  "footer": "São Paulo, Brazil"
+  "link.bookd": "Available on Amazon",
+  "footer": "São Paulo, Brazil",
+  "footer.credit": "Built with the help of <strong>Claude Code</strong>, Anthropic's AI, which handled the code, design and translation based on my content and direction."
 };
 
 const CV = { pt: "cv/CV_Bruno_Nogueira_PT.pdf", en: "cv/CV_Bruno_Nogueira_EN.pdf" };
