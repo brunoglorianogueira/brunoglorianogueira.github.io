@@ -39,9 +39,9 @@ const EN = {
   "quotes.intro": "Excerpts from recommendations by people who led me, were led by me or worked side by side with me.",
   "quotes.note": "Recommendations originally written in Portuguese and translated.",
   "q1": "I have witnessed his <strong>professional excellence</strong>, competence and a <strong>charismatic leadership</strong> that inspires and conveys trust to every employee. […] I learned from him that <strong>doing what is right is an unshakable principle</strong>.",
-  "q1r": "Logistics Coordinator · reported to me for more than 13 years",
+  "q1r": "Logistics Manager at Amju Lentes · reported to me for more than 13 years",
   "q2": "An admirable human being, <strong>fair, objective</strong> and with immense knowledge of the field, as well as a strong <strong>focus on results</strong>. […] Bruno is, without a doubt, <strong>one of the best managers I've had</strong>.",
-  "q2r": "Business Administrator · worked on my team",
+  "q2r": "Store manager in Itajubá · Óticas Carol",
   "q3": "Bruno was always the voice that <strong>brought the solution, not the problem</strong>. <strong>Impeccable organization</strong>, kindness, a courteous tone and proactivity to the fullest. […] Bruno is someone you <strong>recommend with your eyes closed</strong>.",
   "q3r": "Full Professor at UFMG and co-founder of emPRO · project partner at Synapse",
   "q4": "Bruno can <strong>summarize clients' needs clearly and objectively</strong>, improving communication and putting ideas into practice. As a coordinator, he <strong>fostered a cooperative environment</strong>.",
@@ -50,6 +50,12 @@ const EN = {
   "q5r": "HCM Practice Leader, Oracle Consulting · my manager early in my career",
   "q6": "Bruno is <strong>frank and sincere</strong>, and <strong>knows a lot about business and people</strong>. […] After all that time of conversations and professional growth, in which Bruno was key, <strong>I got the promotion I'd been hoping for</strong> at my company.",
   "q6r": "DevOps and Cloud · my mentee at Escola da Nuvem",
+  "q7": "His work is grounded in <strong>encouraging, developing and creating learning opportunities</strong> for his team. He always keeps an eye on the <strong>human side</strong> of his company. […] He has a unique charisma and <strong>enthusiasm for teamwork</strong>.",
+  "q7r": "Sales representative at Amju Lentes · reported to me for 15 years",
+  "q8": "Bruno has always shown a great ability to <strong>combine technical and interpersonal skills</strong>, which is essential to <strong>translate business needs into technology solutions</strong>. […] He spared no effort to <strong>deliver the results</strong> he committed to.",
+  "q8r": "Senior Director of Sales, Marketing and Business Development · we worked together on several projects",
+  "q9": "An excellent professional, dedicated, always willing to help and to <strong>find alternatives and solutions</strong> for the B2B business, focused on <strong>customer satisfaction</strong>. Years of great <strong>synergy, respect and teamwork</strong>.",
+  "q9r": "Sales analyst in the industry · I was her client",
   "quotes.more": "See all recommendations on LinkedIn →",
 
   "cases.eyebrow": "In practice",
@@ -123,7 +129,7 @@ const EN = {
   "p1.body": "It all starts with <strong>respect for individuality and diversity</strong>, and with understanding the <strong>company culture</strong>, to see how well each person fits in it. I give people responsibility and a sense of <strong>building together</strong>, toward <strong>clear goals</strong>.",
   "p1.body2": "The most important skills here are <strong>listening</strong> and <strong>communicating clearly</strong>, so the strategic plan is understood by everyone, in every area. And customers, suppliers and partners are people too: with them, clarity is just as essential.",
   "p2.title": "Processes",
-  "p2.body": "Once I understand the people, processes come in. My strongest points here:",
+  "p2.body": "Once I understand the people, processes come in:",
   "p2.list": "<li><strong>Daily analysis of the numbers</strong></li><li>Design and <strong>effectiveness of each area's processes</strong></li><li><strong>Training</strong> people</li><li><strong>Innovation and digital transformation</strong></li><li><strong>Rigor with the rules</strong>: compliance and legal</li>",
   "p3.title": "Technology",
   "p3.body": "Only then, tools that sustain the process: <strong>ERP, Power BI, CRM</strong> and, today, <strong>generative AI and AI agents</strong> for management.",
@@ -235,7 +241,7 @@ links.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
 
 // Animação suave ao rolar (e barras dos gráficos crescendo)
 if ("IntersectionObserver" in window) {
-  const targets = document.querySelectorAll(".chart, .quote, .case, .gantt, .timeline li, .principles > li, .feature-stats li, .vol-card, .links li");
+  const targets = document.querySelectorAll(".chart, .carousel, .case, .gantt, .timeline li, .principles > li, .feature-stats li, .vol-card, .links li");
   targets.forEach(t => t.classList.add("reveal"));
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => {
@@ -243,4 +249,40 @@ if ("IntersectionObserver" in window) {
     });
   }, { threshold: 0.12 });
   targets.forEach(t => io.observe(t));
+}
+
+// Carrossel de recomendações
+const track = document.querySelector(".quotes");
+if (track) {
+  const prev = document.querySelector(".car-prev");
+  const next = document.querySelector(".car-next");
+  const dotsBox = document.querySelector(".car-dots");
+  const cards = track.querySelectorAll(".quote");
+  const step = () => track.clientWidth + parseFloat(getComputedStyle(track).columnGap || 0);
+  const perView = () => parseInt(getComputedStyle(track).getPropertyValue("--per"), 10) || 1;
+  let pages = 0;
+
+  function buildDots() {
+    pages = Math.ceil(cards.length / perView());
+    dotsBox.innerHTML = "";
+    for (let i = 0; i < pages; i++) {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.addEventListener("click", () => track.scrollTo({ left: i * step() }));
+      dotsBox.appendChild(b);
+    }
+    update();
+  }
+  function update() {
+    const page = Math.round(track.scrollLeft / step());
+    dotsBox.querySelectorAll("button").forEach((b, i) => b.classList.toggle("is-active", i === page));
+    prev.disabled = track.scrollLeft < 5;
+    next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 5;
+  }
+  prev.addEventListener("click", () => track.scrollBy({ left: -step() }));
+  next.addEventListener("click", () => track.scrollBy({ left: step() }));
+  let settle;
+  track.addEventListener("scroll", () => { requestAnimationFrame(update); clearTimeout(settle); settle = setTimeout(update, 120); });
+  window.addEventListener("resize", buildDots);
+  buildDots();
 }

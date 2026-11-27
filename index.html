@@ -245,14 +245,20 @@
         <p class="eyebrow eyebrow-light" data-i18n="quotes.eyebrow">Recomendações</p>
         <h2 class="section-title" data-i18n="quotes.title">O que dizem sobre meu trabalho</h2>
         <p class="section-intro" data-i18n="quotes.intro">Trechos de recomendações de pessoas que lideraram, foram lideradas ou trabalharam lado a lado comigo.</p>
-        <div class="quotes">
+        <div class="carousel">
+          <button class="car-btn car-prev" type="button" aria-label="Anterior">‹</button>
+          <div class="quotes" tabindex="0">
           <figure class="quote">
             <blockquote data-i18n="q1">Tenho testemunhado sua <strong>excelência profissional</strong>, competência e uma <strong>liderança carismática</strong> que inspira e transmite confiança a todos os colaboradores. […] Aprendi com ele que <strong>fazer o que é certo é uma premissa inabalável</strong>.</blockquote>
-            <figcaption><strong>Eni Fontes</strong><span data-i18n="q1r">Coordenadora de Logística · foi minha liderada por mais de 13 anos</span></figcaption>
+            <figcaption><strong>Eni Fontes</strong><span data-i18n="q1r">Gerente de Logística na Amju Lentes · foi minha liderada por mais de 13 anos</span></figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote data-i18n="q7">Seu trabalho é pautado em <strong>incentivar, desenvolver e criar oportunidades de aprendizado</strong> aos seus liderados. É um profissional que está sempre com os olhos voltados ao <strong>lado humano</strong> da sua empresa. […] Tem um carisma peculiar e <strong>entusiasmo com o trabalho em equipe</strong>.</blockquote>
+            <figcaption><strong>Rafael Lourenço</strong><span data-i18n="q7r">Propagandista vendedor na Amju Lentes · foi meu liderado por 15 anos</span></figcaption>
           </figure>
           <figure class="quote">
             <blockquote data-i18n="q2">Um ser humano admirável, <strong>justo, objetivo</strong> e com imenso conhecimento do ramo, além de muito <strong>foco nos resultados</strong>. […] Bruno é, sem dúvidas, <strong>um dos melhores gestores que tive</strong>.</blockquote>
-            <figcaption><strong>Fernanda Mantovani</strong><span data-i18n="q2r">Administradora · trabalhou na minha equipe</span></figcaption>
+            <figcaption><strong>Fernanda Mantovani</strong><span data-i18n="q2r">Gerente da loja de Itajubá · Óticas Carol</span></figcaption>
           </figure>
           <figure class="quote">
             <blockquote data-i18n="q3">Bruno foi sempre aquela voz que <strong>trazia a solução, e não o problema</strong>. <strong>Organização impecável</strong>, gentileza no trato, educação no tom e proatividade no máximo. […] Bruno é daqueles que a gente <strong>recomenda de olhos fechados</strong>.</blockquote>
@@ -263,6 +269,14 @@
             <figcaption><strong>Gabriela Araújo Costa</strong><span data-i18n="q4r">Pediatra e professora (PUC Minas) · trabalhamos juntos na Synapse</span></figcaption>
           </figure>
           <figure class="quote">
+            <blockquote data-i18n="q8">Bruno sempre demonstrou uma grande capacidade de <strong>combinar competências técnicas e interpessoais</strong>, característica essencial para <strong>traduzir necessidades de negócio em soluções de tecnologia</strong>. […] Não media esforços para <strong>entregar os resultados</strong> com os quais se comprometia.</blockquote>
+            <figcaption><strong>Daniel Laper</strong><span data-i18n="q8r">Senior Director of Sales, Marketing and Business Development · trabalhamos juntos em vários projetos</span></figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote data-i18n="q9">Excelente profissional, dedicado, sempre prestativo em ajudar, <strong>buscar alternativas e resoluções</strong> para o negócio B2B, visando a <strong>satisfação de seus clientes</strong>. Foram anos de muita <strong>sinergia, respeito e trabalho em conjunto</strong>.</blockquote>
+            <figcaption><strong>Daiane Rodrigues Carmacio</strong><span data-i18n="q9r">Analista comercial na indústria · eu era cliente dela</span></figcaption>
+          </figure>
+          <figure class="quote">
             <blockquote data-i18n="q5">Tem uma <strong>liderança e espírito empreendedor nato</strong>, e teve grande destaque junto ao time de trainees que montamos na época. […] Eu recomendo fortemente o Bruno por seu talento, <strong>fácil comunicação</strong>, empreendedorismo e <strong>trabalho em equipe</strong>!</blockquote>
             <figcaption><strong>Cláudio Torres</strong><span data-i18n="q5r">HCM Practice Leader, Oracle Consulting · foi meu gestor no início da carreira</span></figcaption>
           </figure>
@@ -271,6 +285,9 @@
             <figcaption><strong>Bruno Lélis</strong><span data-i18n="q6r">DevOps e Cloud · meu mentorado na Escola da Nuvem</span></figcaption>
           </figure>
         </div>
+          <button class="car-btn car-next" type="button" aria-label="Próximo">›</button>
+        </div>
+        <div class="car-dots" aria-hidden="true"></div>
         <p class="small muted-light" data-i18n="quotes.note"></p>
         <p class="see-more"><a href="https://www.linkedin.com/in/brunoglorianogueira/details/recommendations/" target="_blank" rel="noopener" data-i18n="quotes.more">Ver todas as recomendações no LinkedIn →</a></p>
       </div>
@@ -346,7 +363,7 @@
         <li>
           <span class="p-num">2</span>
           <h3 data-i18n="p2.title">Processos</h3>
-          <p data-i18n="p2.body">Entendida a realidade das pessoas, entram os processos. Meus pontos mais fortes aqui:</p>
+          <p data-i18n="p2.body">Entendida a realidade das pessoas, entram os processos:</p>
           <ul class="p-list" data-i18n="p2.list">
             <li><strong>Análise diária dos números</strong></li>
             <li>Desenho e <strong>efetividade dos processos</strong> de cada área</li>
@@ -365,7 +382,7 @@
     </section>
 
     <!-- COMPETÊNCIAS + FORMAÇÃO -->
-    <section class="section section-alt" id="competencias">
+    <section class="section section-tint" id="competencias">
       <div class="container two-col">
         <div>
           <h2 class="section-title" data-i18n="skills.title">Competências</h2>
