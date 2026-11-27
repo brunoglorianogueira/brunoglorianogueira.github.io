@@ -178,7 +178,7 @@ const EN = {
   "book.eyebrow": "My book",
   "book.sub": "A journey through the stories, memories and life lessons of Grandpa Geraldo (in Portuguese)",
   "book.body": "A book written <strong>as a family, by many hands</strong>, gathering the stories of my grandfather, <strong>Geraldo Glória</strong>. He helped build roads across Brazil, but left an even deeper mark on the people he met along the way.",
-  "book.ai": "I used <strong>AI (ChatGPT)</strong> throughout the process: to transcribe the stories sent by the family, organize the texts and, above all, <strong>learn the way my grandfather told his stories</strong>. From there, we built the stories together, <strong>told in his own voice</strong>.",
+  "book.ai": "I used <strong>generative AI (ChatGPT)</strong> throughout the process: to transcribe the stories sent by the family and organize the texts. <strong>I trained the AI on the way my grandfather told his stories</strong>. From there, we built the stories together, <strong>told in his own voice</strong>.",
   "book.cta": "Buy on Amazon",
   "book.format": "In Portuguese · digital and print editions",
 
