@@ -161,6 +161,18 @@ const EN = {
   "cat.link": "Read the full story on LinkedIn",
   "cat.s1": "international cat shows, the <b>only ones ever held in Minas Gerais</b>",
   "cat.s2": "visitors at a single show, in a Belo Horizonte mall",
+  "cat.s2v": "15k+",
+  "a.nav": "Main",
+  "a.home": "Home",
+  "a.photo": "Photo of Bruno Glória Nogueira",
+  "a.rank": "Ranking among Alcon distributors: Top 4 from 2010 to 2022, 1st place from 2012 to 2016",
+  "a.rev": "BRL 3.2 million in 2007 and BRL 5.5 million in 2010",
+  "a.exp": "2025 expenses 27% lower than 2024",
+  "a.prev": "Previous",
+  "a.next": "Next",
+  "a.gantt": "Timeline. Career: Arte Informática 2006–2007; Amju Lentes 2007–2023; Óticas Carol 2017–2025; Synapse 2024–2025; planned break 2026. Volunteering: Maine Coon breeding 2011–2026; Associação Gato Mineiro 2013–2021; CDL Itajubá 2019–2022; Escola da Nuvem 2022–2025.",
+  "a.book": "See the book on Amazon",
+  "a.cover": "Cover of the book Quando os Homens Contavam Histórias",
   "cat.s3v": "BRL 150k",
   "cat.s3": "budget for the largest show. Over the years, sponsorship from <b>Royal Canin, Ourofino and Avert</b>",
   "cat.s4": "shows in Brazil, Argentina, Mexico, Denmark, Austria and the Czech Republic",
@@ -205,12 +217,19 @@ const META = {
 
 const nodes = document.querySelectorAll("[data-i18n]");
 nodes.forEach(el => { el.dataset.pt = el.innerHTML; });
+const ATTRS = [["label", "aria-label"], ["alt", "alt"]];
+const attrNodes = document.querySelectorAll("[data-i18n-label], [data-i18n-alt]");
+attrNodes.forEach(el => ATTRS.forEach(([k, a]) => { if (el.hasAttribute("data-i18n-" + k)) el.dataset["pt" + k] = el.getAttribute(a); }));
 
 function setLang(lang) {
   nodes.forEach(el => {
     const key = el.dataset.i18n;
     el.innerHTML = lang === "en" && EN[key] ? EN[key] : el.dataset.pt;
   });
+  attrNodes.forEach(el => ATTRS.forEach(([k, a]) => {
+    const key = el.getAttribute("data-i18n-" + k);
+    if (key) el.setAttribute(a, lang === "en" && EN[key] ? EN[key] : el.dataset["pt" + k]);
+  }));
   document.documentElement.lang = META[lang].lang;
   document.title = META[lang].title;
   document.querySelectorAll(".js-cv").forEach(a => { a.href = CV[lang]; });
