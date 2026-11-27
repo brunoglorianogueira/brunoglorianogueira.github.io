@@ -203,10 +203,6 @@
             <dt data-i18n="lbl.impact">Impacto</dt>
             <dd data-i18n="c2.impact">Prazo de entrega reduzido <strong>de 6 para 3 dias</strong>, com menos ruptura e mais previsibilidade de caixa.</dd>
           </dl>
-          <div class="hbars hbars-light" role="img" aria-label="Prazo de entrega: 6 dias antes, 3 dias depois">
-            <div class="hbar"><span class="hbar-lbl" data-i18n="lbl.before">Antes</span><span class="hbar-track"><span class="hbar-fill" style="--w:100%"></span></span><span class="hbar-val" data-i18n="ch3.v1">6 dias</span></div>
-            <div class="hbar is-hl"><span class="hbar-lbl" data-i18n="lbl.after">Depois</span><span class="hbar-track"><span class="hbar-fill" style="--w:50%"></span></span><span class="hbar-val" data-i18n="ch3.v2">3 dias</span></div>
-          </div>
         </article>
 
         <article class="case">
@@ -223,10 +219,6 @@
             <dt data-i18n="lbl.impact">Impacto</dt>
             <dd data-i18n="c3.impact"><strong>−27% de despesas</strong>, propostas em <strong>36h em vez de 96h</strong> e <strong>NPS acima de 85</strong> em mais de 250 encontros científicos.</dd>
           </dl>
-          <div class="hbars hbars-light" role="img" aria-label="Prazo para enviar propostas: 96 horas antes, 36 horas depois">
-            <div class="hbar"><span class="hbar-lbl" data-i18n="lbl.before">Antes</span><span class="hbar-track"><span class="hbar-fill" style="--w:100%"></span></span><span class="hbar-val">96h</span></div>
-            <div class="hbar is-hl"><span class="hbar-lbl" data-i18n="lbl.after">Depois</span><span class="hbar-track"><span class="hbar-fill" style="--w:37.5%"></span></span><span class="hbar-val">36h</span></div>
-          </div>
         </article>
 
         <article class="case">
@@ -247,19 +239,39 @@
       </div>
     </section>
 
-    <!-- DEPOIMENTOS (reservado: remova "hidden" quando os textos estiverem preenchidos) -->
-    <section class="section section-alt" id="depoimentos" hidden>
+    <!-- DEPOIMENTOS: trechos de recomendações do LinkedIn -->
+    <section class="section section-dark" id="depoimentos">
       <div class="container">
-        <p class="eyebrow" data-i18n="quotes.eyebrow">Recomendações</p>
+        <p class="eyebrow eyebrow-light" data-i18n="quotes.eyebrow">Recomendações</p>
         <h2 class="section-title" data-i18n="quotes.title">O que dizem sobre meu trabalho</h2>
+        <p class="section-intro" data-i18n="quotes.intro">Trechos de recomendações de pessoas que lideraram, foram lideradas ou trabalharam lado a lado comigo.</p>
         <div class="quotes">
-          <!-- Modelo de card (repita para cada recomendação):
           <figure class="quote">
-            <blockquote>Texto da recomendação, em até 3 ou 4 linhas.</blockquote>
-            <figcaption><strong>Nome da pessoa</strong><span>Cargo · Empresa · relação (ex.: foi meu gestor)</span></figcaption>
+            <blockquote data-i18n="q1">Tenho testemunhado sua <strong>excelência profissional</strong>, competência e uma <strong>liderança carismática</strong> que inspira e transmite confiança a todos os colaboradores. […] Aprendi com ele que <strong>fazer o que é certo é uma premissa inabalável</strong>.</blockquote>
+            <figcaption><strong>Eni Fontes</strong><span data-i18n="q1r">Coordenadora de Logística · foi minha liderada por mais de 13 anos</span></figcaption>
           </figure>
-          -->
+          <figure class="quote">
+            <blockquote data-i18n="q2">Um ser humano admirável, <strong>justo, objetivo</strong> e com imenso conhecimento do ramo, além de muito <strong>foco nos resultados</strong>. […] Bruno é, sem dúvidas, <strong>um dos melhores gestores que tive</strong>.</blockquote>
+            <figcaption><strong>Fernanda Mantovani</strong><span data-i18n="q2r">Administradora · trabalhou na minha equipe</span></figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote data-i18n="q3">Bruno foi sempre aquela voz que <strong>trazia a solução, e não o problema</strong>. <strong>Organização impecável</strong>, gentileza no trato, educação no tom e proatividade no máximo. […] Bruno é daqueles que a gente <strong>recomenda de olhos fechados</strong>.</blockquote>
+            <figcaption><strong>Cassio Ibiapina</strong><span data-i18n="q3r">Professor Titular na UFMG e cofundador do emPRO · parceiro de projeto na Synapse</span></figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote data-i18n="q4">Bruno é capaz de <strong>sintetizar as demandas dos clientes de forma clara e objetiva</strong>, favorecendo a comunicação e a operacionalização das ideias. Como coordenador, <strong>favorecia um ambiente de cooperação</strong>.</blockquote>
+            <figcaption><strong>Gabriela Araújo Costa</strong><span data-i18n="q4r">Pediatra e professora (PUC Minas) · trabalhamos juntos na Synapse</span></figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote data-i18n="q5">Tem uma <strong>liderança e espírito empreendedor nato</strong>, e teve grande destaque junto ao time de trainees que montamos na época. […] Eu recomendo fortemente o Bruno por seu talento, <strong>fácil comunicação</strong>, empreendedorismo e <strong>trabalho em equipe</strong>!</blockquote>
+            <figcaption><strong>Cláudio Torres</strong><span data-i18n="q5r">HCM Practice Leader, Oracle Consulting · foi meu gestor no início da carreira</span></figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote data-i18n="q6">O Bruno é um cara <strong>franco, sincero</strong>, que <strong>conhece muito de negócios e pessoas</strong>. […] Depois desse tempo todo de bate-papo e amadurecimento profissional, no qual o Bruno foi fundamental, <strong>consegui a sonhada promoção</strong> na empresa em que atuo.</blockquote>
+            <figcaption><strong>Bruno Lélis</strong><span data-i18n="q6r">DevOps e Cloud · meu mentorado na Escola da Nuvem</span></figcaption>
+          </figure>
         </div>
+        <p class="small muted-light" data-i18n="quotes.note"></p>
         <p class="see-more"><a href="https://www.linkedin.com/in/brunoglorianogueira/details/recommendations/" target="_blank" rel="noopener" data-i18n="quotes.more">Ver todas as recomendações no LinkedIn →</a></p>
       </div>
     </section>
@@ -281,7 +293,7 @@
           <div class="g-row"><span class="g-lbl" data-i18n="g.break">Pausa planejada</span><span class="g-track"><span class="g-bar g-c4 g-out-l" style="left:95.24%;width:4.76%"><em data-i18n="g.breakd">Estudos e projetos · 2026</em></span></span></div>
           <p class="g-group" data-i18n="g.vol">Voluntariado</p>
           <div class="g-row g-row-vol"><span class="g-lbl" data-i18n="g.v1l">Gatos Maine Coon</span><span class="g-track"><span class="g-bar g-vol" style="left:23.81%;width:71.43%"><em data-i18n="g.v1">Criador, palestrante e auxiliar veterinário · 15 anos</em></span></span></div>
-          <div class="g-row g-row-vol"><span class="g-lbl">Gato Mineiro</span><span class="g-track"><span class="g-bar g-vol" style="left:33.33%;width:38.1%"><em data-i18n="g.v2">Cofundador e presidente · 8 anos</em></span></span></div>
+          <div class="g-row g-row-vol"><span class="g-lbl">Gato Mineiro</span><span class="g-track"><span class="g-bar g-vol" style="left:33.33%;width:38.1%"><em data-i18n="g.v2">Fundador e presidente · 8 anos</em></span></span></div>
           <div class="g-row g-row-vol"><span class="g-lbl">CDL Itajubá</span><span class="g-track"><span class="g-bar g-vol" style="left:61.9%;width:14.29%"><em data-i18n="g.v3">Diretor · 3 anos</em></span></span></div>
           <div class="g-row g-row-vol"><span class="g-lbl">Escola da Nuvem</span><span class="g-track"><span class="g-bar g-vol" style="left:76.19%;width:14.29%"><em data-i18n="g.v4">Mentor · 3 anos</em></span></span></div>
           <div class="g-row g-axis"><span class="g-lbl"></span><span class="g-track">
@@ -403,7 +415,7 @@
           <p class="case-tag" data-i18n="cat.tag">Felinos de raça · 2011 – 2026</p>
           <h3 data-i18n="cat.title">15 anos dedicados aos gatos</h3>
           <p data-i18n="cat.p1">Em 2011 comecei a estudar a raça Maine Coon. Do meu gatil saiu o <strong>primeiro gato da raça em Minas Gerais a conquistar o título de Junior Winner</strong>.</p>
-          <p data-i18n="cat.p2">Fui <strong>diretor da Amacoon</strong>, a associação brasileira de criadores da raça, e <strong>cofundador e presidente da Associação Gato Mineiro</strong>, por 8 anos em cada cargo. Ao lado da minha esposa, médica-veterinária especialista em felinos, atuei por <strong>10 anos como auxiliar veterinário</strong> no tempo livre.</p>
+          <p data-i18n="cat.p2">Fui <strong>diretor da Amacoon</strong>, a associação brasileira de criadores da raça, e <strong>fundador e presidente da Associação Gato Mineiro</strong>, por 8 anos em cada cargo. Ao lado da minha esposa, médica-veterinária especialista em felinos, atuei por <strong>10 anos como auxiliar veterinário</strong> no tempo livre.</p>
           <a class="link-arrow" href="https://lnkd.in/p/d2pkeddr" target="_blank" rel="noopener"><span data-i18n="cat.link">Leia a história completa no LinkedIn</span><svg><use href="#i-arrow"/></svg></a>
         </div>
         <ul class="feature-stats">
