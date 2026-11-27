@@ -1,6 +1,6 @@
 # Orientações
 
-Resumo do guia para criar um portfólio profissional como este com o Claude Code.
+Resumo do guia para criar um portfólio profissional como este com o Claude Code. O guia completo, com o prompt pronto para colar, está em [Prompt_Portfolio_com_Claude_Code.md](Prompt_Portfolio_com_Claude_Code.md).
 
 ## Parte 1 · Preparação, do zero
 
